@@ -1,0 +1,84 @@
+/* moje-konto.css */
+
+/* Resetowanie domyślnych stylów */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+  
+/* Globalne style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2251;
+    color: #fff;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #6c63ff;
+    padding: 20px;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    background-color: #6c63ff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section#main-content {
+    padding: 20px;
+}
+
+footer {
+    background-color: #6c63ff;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Dodatkowe style dla podstrony "Moje konto" w stylu Miami Vice */
+section#my-account {
+    background-color: #f600ff;
+    color: #fff;
+    padding: 20px;
+}
+
+section#my-account h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Styl dla odnośnika do strony głównej */
+a#homepageLink {
+    color: #6c63ff;
+    text-decoration: none;
+}
+
+a#homepageLink:hover {
+    text-decoration: underline;
+}

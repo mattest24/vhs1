@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Katalog filmów</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Katalog</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="../koszyk/koszyk.html">Koszyk</a></li>
+        <li><a href="../konto/konto.html">Moje konto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <table id="movieTable">
+    <tr>
+      <th>Tytuł</th>
+      <th>Rok</th> 
+      <th>Reżyser</th>
+      <th>Cena</th>
+      <th>Ilość</th>
+    </tr>
+  </table>
+
+  <script>
+    // Pobierz dane z pliku movies.json
+    fetch('data/movies.json')
+      .then(response => response.json())
+      .then(data => {
+
+        // Przeiteruj po danych i dodaj wiersze do tabeli
+        data.forEach(movie => {
+          let row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${movie.title}</td>
+            <td>${movie.year}</td>
+            <td>${movie.director}</td>
+            <td>${movie.price}</td> 
+            <td>${movie.quantity}</td>
+          `;
+          document.getElementById('movieTable').appendChild(row);
+        });
+
+      });
+  </script>
+
+</body>
+</html>
