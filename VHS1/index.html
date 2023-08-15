@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Wypożyczalnia kaset wideo</title>
-  <link rel="stylesheet" type="text/css" href="app.css">
-  <script src="ap.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <link rel="icon" type="image/png" href="https://icons8.com/icon/22skWjUReayF/video">
+  <script type="text/javascript" src="navigation.js"></script>
 </head>
 <body>
   <header>
     <h1>Wypożyczalnia kaset wideo</h1>
+    <div id="logo"><img src="img/logo.gif" alt="Logo" id="logo"></div>
+
   </header>
   
   <nav>
@@ -17,17 +20,143 @@
       <li><a href="#">Strona główna</a></li>
       <li><a href="katalog/katalog.html">Katalog</a></li>
       <li><a href="koszyk/koszyk.html">Koszyk</a></li>
-      <li><a href="konto/konto.css">Moje konto</a></li>
+      <li><a href="konto/konto.html">Moje konto</a></li>
+      <li><a href="login/login.html">Login</a></li>
+      <li><a href="rejestracja/rejestracja.html">Rejestracja</a></li>
     </ul>
   </nav>
-  
   <section id="main-content">
     <h2>Witaj w naszej wypożyczalni kaset wideo!</h2>
     <p>Znajdziesz u nas szeroki wybór filmów do wypożyczenia.</p>
   </section>
+
+  <section id="promotion-text">
+    <h2>DZISIAJ W PROMOCJI</h2>
+  </section>
+
+  <!-- Slider with current promotions -->
+  <section id="slider">
+   <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/Ojciec_Chrzestny.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/Avengers.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/Chłopcy_z_Ferajny.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/Incepcja.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Pobierz wszystkie elementy z klasą "numbertext"
+      const numbertextElements = document.querySelectorAll('.numbertext');
   
+      // Iteruj przez każdy element i aktualizuj numerację
+      numbertextElements.forEach((element, index) => {
+        // Pobierz nazwę pliku obrazka ze src
+        const imageSrc = element.nextElementSibling.getAttribute('src');
+        const imageName = imageSrc.split('/').pop().split('.jpg')[0]; // Pobierz nazwę pliku bez rozszerzenia .jpg
+  
+        // Zamień podkreślenia na spacje i ustaw napis w elemencie
+        const title = imageName.replace(/_/g, ' ');
+        const slideNumber = index + 1;
+        element.textContent = `${slideNumber} / 4 : ${title}`;
+      });
+    });
+  </script>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+  <!-- Section about the company -->
+  <section id="about-us">
+    <h2>O nas</h2>
+    <p>Witaj w naszej wypożyczalni VHS!
+
+      Jesteśmy pasjonatami klasycznych filmów na kasetach VHS, i to właśnie ta miłość do vintage'owych produkcji z lat 80. i 90. skłoniła nas do stworzenia tego miejsca. Chcieliśmy podzielić się naszą pasją z Tobą, dlatego zapraszamy Cię do podróży w czasie, abyś mógł ponownie odkryć magię klasycznych produkcji filmowych.
+      </p>
+
+  </section>
+   <!--add new section with google map location-->
+   <section id="location">
+    <h2>Lokalizacja</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?key=YOUR_GOOGLE_MAPS_API_KEY" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="location-info">
+      <p>Nasza wypożyczalnia znajduje się w centrum Warszawy, w pobliżu stacji metra Świętokrzyska. Zapraszamy!</p>
+    </div>
+  </div>
+  </section>
+
+  <!-- Contact section -->
+
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <div class="contact-content">
+      <div class="contact-text">
+        <div class="nazwa_firmy">Nazwa firmy: Vintage VHS Films
+          <br>
+          Adres: ul. Kinowa 123, 00-000 Miastowo
+          <br>
+          Numer telefonu: +48 123 456 789
+          <br>
+          Adres e-mail: info@vintagevhsfilms.com
+          <br><br>
+        </div>
+        <div class="godziny_otwarcia">Godziny otwarcia:
+          <br>
+          Poniedziałek - Piątek: 9:00 - 18:00<br>
+          Sobota: 10:00 - 16:00<br>
+          Niedziela: Zamknięte<br>
+          <br>
+        </div>
+        <div class="osoba_kontaktowa">
+          Imię i nazwisko: Anna Kowalska<br>
+          Stanowisko: Kierownik Wypożyczalni<br>
+          E-mail: anna.kowalska@vintagevhsfilms.com
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="img/store.jpg" alt="Nasz sklep" />
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+ 
   <footer>
     <p>&copy; 2023 Wypożyczalnia kaset wideo. Wszelkie prawa zastrzeżone.</p>
   </footer>
+</section>
+  <script src="app.js"></script>
 </body>
 </html>
