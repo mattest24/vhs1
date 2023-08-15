@@ -104,3 +104,52 @@ a#homepageLink {
 a#homepageLink:hover {
   text-decoration: underline;
 }
+
+/* Styl dla tabeli */
+#cartTable {
+  margin: 0 auto; /* Centrowanie tabeli */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+#cartTable th,
+#cartTable td {
+  border: 1px solid #f600ff;
+  padding: 8px;
+  text-align: center;
+}
+
+#cartTable th {
+  background-color: #f600ff;
+  color: #333;
+}
+
+#cartTable td:last-child {
+  text-align: right;
+}
+
+/* Styl dla przycisków */
+button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Styl dla rozwijanej listy */
+.quantity {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #f600ff;
+  font-size: 14px;
+}
+

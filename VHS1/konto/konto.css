@@ -82,3 +82,49 @@ a#homepageLink {
 a#homepageLink:hover {
     text-decoration: underline;
 }
+
+/* Stylowanie tabeli */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #6c63ff;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f600ff;
+    color: #fff;
+}
+
+/* Stylowanie przycisków w tabeli */
+button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #6c63ff;
+}
+
+#moje_zamowienia {
+    margin: 20px;
+  }
+  
+  
+  
+  
