@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Katalog - Wypożyczalnia kaset wideo - Rejestracja</title>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="icon" type="image/png" href="https://icons8.com/icon/22skWjUReayF/video">
+  
+</head>
+<body>
+  <header>
+    <h1>Wypożyczalnia kaset wideo - Rejestracja</h1>
+    <div id="logo"><img src="../img/logo.gif" alt="Logo" id="logo"></div>
+  </header>
+  
+    <nav>
+      <ul>
+        <li><a href="../index.html">Strona główna</a></li>
+        <li><a href="../katalog/katalog.html">Katalog</a></li>
+        <li><a href="../koszyk/koszyk.html">Koszyk</a></li>
+        <li><a href="../konto/konto.html">Moje konto</a></li>
+        <li><a href="../login/login.html">Login</a></li>
+        <li><a href="../rejestracja/rejestracja.html">Rejestracja</a></li>
+      </ul>
+    </nav>
+  
+    <section id="input-section">
+      <h2>Rejestracja</h2>
+      <form id="registration-form" action="/register" method="POST"> <!-- Dodajemy action i method -->
+        <div>
+          <label for="username">Nazwa użytkownika:</label>
+          <input type="text" id="username" required>
+        </div>
+        <div>
+          <label for="email">Adres email:</label>
+          <input type="email" id="email" required>
+        </div>
+        <div>
+          <label for="password">Hasło:</label>
+          <input type="password" id="password" required>
+        </div>
+        <div>
+          <label for="confirm-password">Potwierdź hasło:</label>
+          <input type="password" id="confirm-password" required>
+        </div>
+        <button type="submit">Zarejestruj się</button>
+      </form>
+    </section>
+
+    <!-- Komunikat o statusie rejestracji -->
+    <div id="registration-status"></div>
+    
+  
+  <footer>
+    <p>&copy; 2023 Wypożyczalnia kaset wideo. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Skrypt rejestracji -->
+  <script src="rejestracja.js"></script>
+</body>
+</html>
+
