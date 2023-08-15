@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Katalog filmów</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>Katalog - Wypożyczalnia kaset wideo</title>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="icon" type="image/png" href="https://icons8.com/icon/22skWjUReayF/video">
 </head>
 <body>
-  <header>
-    <h1>Katalog</h1>
+    <header>
+      <h1>Wypożyczalnia kaset wideo - Katalog</h1>
+      <div id="logo"><img src="../img/logo.gif" alt="Logo" id="logo"></div>
+    </header>
+    
     <nav>
       <ul>
         <li><a href="../index.html">Strona główna</a></li>
         <li><a href="katalog.html">Katalog</a></li>
         <li><a href="../koszyk/koszyk.html">Koszyk</a></li>
         <li><a href="../konto/konto.html">Moje konto</a></li>
+        <li><a href="../login/login.html">Login</a></li>
+        <li><a href="../rejestracja/rejestracja.html">Rejestracja</a></li>
       </ul>
     </nav>
-  </header>
-  <table id="movieTable">
-    <tr>
-      <th>Tytuł</th>
-      <th>Rok</th> 
-      <th>Reżyser</th>
-      <th>Cena</th>
-      <th>Ilość</th>
-    </tr>
+
+  <section>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Wyszukaj film...">
+    <button id="searchButton">Szukaj</button>
+  </div>
+</section>
+  
+  <table id="movieTable" class="table table-sortable">
+    <thead>
+      <tr>
+        <th><a href="#" class="sort-link" onclick="sortTable(0)">Tytuł</a></th>
+        <th><a href="#" class="sort-link" onclick="sortTable(1)">Rok</a></th>
+        <th><a href="#" class="sort-link" onclick="sortTable(2)">Reżyser</a></th>
+        <th><a href="#" class="sort-link" onclick="sortTable(3)">Cena</a></th>
+        <th><a href="#" class="sort-link" onclick="sortTable(4)">Ilość</a></th>
+        <th>Operacje</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
   </table>
-
-  <script>
-    // Pobierz dane z pliku movies.json
-    fetch('data/movies.json')
-      .then(response => response.json())
-      .then(data => {
-
-        // Przeiteruj po danych i dodaj wiersze do tabeli
-        data.forEach(movie => {
-          let row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${movie.title}</td>
-            <td>${movie.year}</td>
-            <td>${movie.director}</td>
-            <td>${movie.price}</td> 
-            <td>${movie.quantity}</td>
-          `;
-          document.getElementById('movieTable').appendChild(row);
-        });
-
-      });
-  </script>
-
+  <footer>
+    <p>&copy; 2023 Wypożyczalnia kaset wideo. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+<script src="app.js"></script>
+<script src="search.js"></script>
 </body>
 </html>
